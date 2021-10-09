@@ -66,6 +66,10 @@ public class Birb : MonoBehaviour
 
     public void Launch(Vector3 offset, float maximumStretch, Rigidbody2D rigidbody)
     {
+        Rigidbody2D rb = this.gameObject.GetComponent<Rigidbody2D>();
+
+        rb.AddForce(-offset * LaunchForce * maximumStretch, ForceMode2D.Force);
+
         throw new System.NotImplementedException();
     }
 
