@@ -70,6 +70,8 @@ public class Birb : MonoBehaviour
 
         rb.AddForce(-offset * (LaunchForce * maximumStretch), ForceMode2D.Impulse);
 
+        
+
         throw new System.NotImplementedException();
     }
 
