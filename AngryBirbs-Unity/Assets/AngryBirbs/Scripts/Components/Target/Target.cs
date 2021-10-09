@@ -9,6 +9,10 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter2D( Collision2D collision )
     {
+        if (collision.rigidbody.velocity.x >= MinimumBreakSpeed || collision.rigidbody.velocity.y >= MinimumBreakSpeed)
+        {
+            DestroyTarget();
+        }
         throw new System.NotImplementedException();
     }
 
