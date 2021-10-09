@@ -14,7 +14,7 @@ public class AirSpecialBounce : MonoBehaviour, IAirSpecial
         
 
         rb.AddForce(Vector2.up * -rb.velocity.y*2, ForceMode2D.Impulse);
-        xSpeed *= (100 * SlowDownFactor);
+        xSpeed = xSpeed * (100 * SlowDownFactor);
 
         throw new System.NotImplementedException();
     }
