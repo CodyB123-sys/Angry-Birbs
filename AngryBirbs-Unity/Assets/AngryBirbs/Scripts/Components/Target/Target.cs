@@ -9,11 +9,15 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter2D( Collision2D collision )
     {
-        if (collision.rigidbody.velocity.x >= MinimumBreakSpeed || collision.rigidbody.velocity.y >= MinimumBreakSpeed)
+        //Debug.Log(collision.rigidbody.name);
+        Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity);
+
+        if (Mathf.Abs(collision.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude) >= MinimumBreakSpeed)
         {
             DestroyTarget();
+            
         }
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public void DestroyTarget()

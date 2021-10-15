@@ -7,6 +7,13 @@ public class AirSpecialExplode : MonoBehaviour, IAirSpecial
 
     public void ExecuteAirSpecial()
     {
+
         throw new System.NotImplementedException();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, BlastRadius);
     }
 }
