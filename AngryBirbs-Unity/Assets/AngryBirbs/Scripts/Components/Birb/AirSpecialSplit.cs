@@ -7,6 +7,6 @@ public class AirSpecialSplit : MonoBehaviour, IAirSpecial
     public void ExecuteAirSpecial()
     {
 
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

@@ -19,12 +19,10 @@ public class AirSpecialBounce : MonoBehaviour, IAirSpecial
 
         Debug.Log("this is the initial speed " + rb.velocity.magnitude);
 
-        //if (rb.velocity.y < 0) 
-        //{
-            rb.velocity = (new Vector2(rb.velocity.x, -rb.velocity.y)) * (1 - SlowDownFactor);
-            Debug.Log("this is the new speed " + rb.velocity.magnitude);
+        rb.velocity = (new Vector2(rb.velocity.x, -rb.velocity.y)) * (1 - SlowDownFactor);
+        Debug.Log("this is the new speed " + rb.velocity.magnitude);
             
-        //}
+       
 
         
         
