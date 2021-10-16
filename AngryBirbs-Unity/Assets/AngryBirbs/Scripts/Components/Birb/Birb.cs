@@ -71,7 +71,7 @@ public class Birb : MonoBehaviour
 
         rb.AddForce((-offset * LaunchForce * maximumStretch), ForceMode2D.Impulse);
 
-        //Debug.Log(rb.velocity.magnitude);
+        Debug.Log("this is the initial velocity " + rb.velocity.magnitude);
 
 
         //throw new System.NotImplementedException();

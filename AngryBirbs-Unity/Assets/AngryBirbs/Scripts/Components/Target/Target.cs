@@ -12,7 +12,7 @@ public class Target : MonoBehaviour
         //Debug.Log(collision.rigidbody.name);
         Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity);
 
-        if (Mathf.Abs(collision.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude) >= MinimumBreakSpeed)
+        if (collision.relativeVelocity.magnitude >= MinimumBreakSpeed)
         {
             DestroyTarget();
             
