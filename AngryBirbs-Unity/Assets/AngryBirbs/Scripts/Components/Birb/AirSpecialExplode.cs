@@ -17,6 +17,8 @@ public class AirSpecialExplode : MonoBehaviour, IAirSpecial
         {
             target.DestroyTarget();
         }
+
+        //Debug.Log("this special move is activating");
         //throw new System.NotImplementedException();
     }
 

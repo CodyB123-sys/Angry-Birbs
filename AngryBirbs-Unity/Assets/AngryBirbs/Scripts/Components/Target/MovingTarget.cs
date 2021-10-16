@@ -19,10 +19,8 @@ public class MovingTarget : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(initialPosition);
-        Debug.Log(this.transform.position.y);
-
-        //rb.velocity = Vector2.up * MovementSpeed;
+        //Debug.Log(initialPosition);
+        //Debug.Log(this.transform.position.y);
 
         if (this.transform.position.y <= (initialPosition.y + HalfPathDistance) && rb.velocity.y == 0)
         {
