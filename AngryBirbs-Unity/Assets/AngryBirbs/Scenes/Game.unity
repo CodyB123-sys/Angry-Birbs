@@ -598,7 +598,7 @@ PrefabInstance:
     - target: {fileID: 114850998536651580, guid: 6b70f04abe8325745abb2036f34456a1,
         type: 3}
       propertyPath: MinimumBreakSpeed
-      value: 9.4
+      value: 16.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b70f04abe8325745abb2036f34456a1, type: 3}
