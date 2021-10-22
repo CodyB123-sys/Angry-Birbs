@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05035535293717f4c9c6be129dc7af40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SplitAngleInDegrees: 45.3
+  SplitAngleInDegrees: 10
 --- !u!58 &58283479560607040
 CircleCollider2D:
   m_ObjectHideFlags: 0

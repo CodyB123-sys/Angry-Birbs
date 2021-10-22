@@ -380,6 +380,16 @@ PrefabInstance:
       propertyPath: MinimumBreakSpeed
       value: 9.4
       objectReference: {fileID: 0}
+    - target: {fileID: 114291698134168358, guid: 84668bffb41a06048beb2d467711ed8a,
+        type: 3}
+      propertyPath: MovementSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291698134168358, guid: 84668bffb41a06048beb2d467711ed8a,
+        type: 3}
+      propertyPath: HalfPathDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84668bffb41a06048beb2d467711ed8a, type: 3}
 --- !u!1 &534669902

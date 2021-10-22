@@ -2,25 +2,31 @@
 
 public class AirSpecialExplode : MonoBehaviour, IAirSpecial
 {
-    [Range( 0, 5 )]
+    [Range(0, 5)]
     public float BlastRadius = 2;
-    public LayerMask layerMask;
-    public bool targetInPosition;
+    int targetMasks = new LayerMask();
+    Collider2D[] targets;
     Target target;
 
     public void ExecuteAirSpecial()
     {
-        target = GetComponent<Target>();
-        targetInPosition = Physics2D.OverlapCircle(this.transform.position, BlastRadius, layerMask);
+        //targetMask = LayerMask.GetMask("Target");
+        targets = Physics2D.OverlapCircleAll(this.transform.position, BlastRadius, LayerMask.GetMask("Target"));
 
-        if (targetInPosition == true)
+        foreach (Collider2D colliders in targets)
         {
-            target.DestroyTarget();
+            colliders.GetComponent<Target>().DestroyTarget();
+            Debug.Log("activating special move");
         }
 
         //Debug.Log("this special move is activating");
         //throw new System.NotImplementedException();
     }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }*/
 
     private void OnDrawGizmosSelected()
     {

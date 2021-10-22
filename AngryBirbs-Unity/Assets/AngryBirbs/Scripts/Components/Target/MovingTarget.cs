@@ -27,12 +27,12 @@ public class MovingTarget : MonoBehaviour
             rb.velocity = Vector2.up * MovementSpeed;
         }
 
-        if (this.transform.position.y >= (initialPosition.y + HalfPathDistance) && rb.velocity.y >= 2)
+        if (this.transform.position.y >= (initialPosition.y + HalfPathDistance) && rb.velocity.y >= MovementSpeed)
         {
             rb.velocity = Vector2.down * MovementSpeed;
         }
 
-        if (this.transform.position.y <= (initialPosition.y - HalfPathDistance) && rb.velocity.y <= -2)
+        if (this.transform.position.y <= (initialPosition.y - HalfPathDistance) && rb.velocity.y <= -MovementSpeed)
         {
             rb.velocity = Vector2.up * MovementSpeed;
         }

@@ -142,10 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b011e6c0e17f7458ada2a0923b9a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlastRadius: 2
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1073741824
+  BlastRadius: 5
 --- !u!58 &58426445998037534
 CircleCollider2D:
   m_ObjectHideFlags: 0
