@@ -66,12 +66,11 @@ public class Birb : MonoBehaviour
 
     public void Launch(Vector3 offset, float maximumStretch, Rigidbody2D rigidbody)
     {
-        
-        //Rigidbody2D rb = this.gameObject.GetComponent<Rigidbody2D>();
+       rigidbody.AddForce((-offset * LaunchForce * maximumStretch), ForceMode2D.Impulse);
 
-        rigidbody.AddForce((-offset * LaunchForce * maximumStretch), ForceMode2D.Impulse);
+        //Debug.Log("this is the initial velocity " + rigidbody.velocity.magnitude);
+        //Debug.Log("this is the calculation: " + (-offset * LaunchForce * maximumStretch).magnitude);
 
-        //Debug.Log("this is the initial velocity " + rb.velocity.magnitude);
 
 
         //throw new System.NotImplementedException();

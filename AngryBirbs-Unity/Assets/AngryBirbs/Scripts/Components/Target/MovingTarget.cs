@@ -21,6 +21,7 @@ public class MovingTarget : MonoBehaviour
     {
         //Debug.Log(initialPosition);
         //Debug.Log(this.transform.position.y);
+        //Debug.Log(rb.velocity.magnitude);
 
         if (this.transform.position.y <= (initialPosition.y + HalfPathDistance) && rb.velocity.y == 0)
         {

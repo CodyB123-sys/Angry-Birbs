@@ -27,32 +27,25 @@ public class AirSpecialSplit : MonoBehaviour, IAirSpecial
         blueBirbrb2.simulated = true;
         blueBirbrb3.simulated = true;
 
-        // find speed of initial
         float birdSpeed = blueBirbrb1.velocity.magnitude;
 
-        //// find direction -> angle of initial
         float initialAngle = Mathf.Atan2(blueBirbrb1.velocity.y, blueBirbrb1.velocity.x);
         float angle2;
         float angle3;
 
-        // calculate angle above and below
         angle2 = initialAngle + (SplitAngleInDegrees * Mathf.Deg2Rad);
         angle3 = initialAngle - (SplitAngleInDegrees * Mathf.Deg2Rad);
 
-        // set new directions
         Vector2 birdDirection2 = new Vector2 (Mathf.Cos(angle2), Mathf.Sin(angle2));
         Vector2 birdDirection3 = new Vector2 (Mathf.Cos(angle3), Mathf.Sin(angle3));
 
 
-        blueBirbrb2.velocity = birdDirection2 * birdSpeed;  //someDirection * someSpeed;
-        blueBirbrb3.velocity = birdDirection3 * birdSpeed;  //someDirection * someSpeed;
+        blueBirbrb2.velocity = birdDirection2 * birdSpeed;  
+        blueBirbrb3.velocity = birdDirection3 * birdSpeed;
 
+        //Debug.Log("this is blueBird 2 direction " + birdDirection2);
+        //Debug.Log("this is bluebird 3 direction: " + birdDirection3);
 
-
-
-
-
-        //blueBirb2.GetComponent<Rigidbody2D>().velocity = new Vector2(blueBirb1.GetComponent<Rigidbody2D>().velocity.x, blueBirb1.GetComponent<Rigidbody2D>().velocity.y + SplitAngleInDegrees);
         //throw new System.NotImplementedException();
     }
 }

@@ -7,26 +7,18 @@ public class AirSpecialBounce : MonoBehaviour, IAirSpecial
     public float SlowDownFactor = 1;
     
 
-    /*void FixedUpdate()
-    {
-        Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
-        Debug.Log(rb.velocity.y);
-    }*/
-
     public void ExecuteAirSpecial()
     {
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
 
-        Debug.Log("this is the initial speed " + rb.velocity.magnitude);
+        //Debug.Log("this is the initial speed " + rb.velocity.magnitude);
 
         rb.velocity = (new Vector2(rb.velocity.x, -rb.velocity.y)) * (1 - SlowDownFactor);
         
-        Debug.Log("this is the new speed " + rb.velocity.magnitude);
+        //Debug.Log("this is the new speed " + rb.velocity.magnitude);
             
-       
-
-        
-        
         //throw new System.NotImplementedException();
     }
+
+    
 }
